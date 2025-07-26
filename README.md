@@ -70,6 +70,35 @@ This project presents a cost-effective, non-invasive, and accurate system for di
 
 ---
 
+## 💻 Installation
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/lung-sound-diagnosis.git
+cd lung-sound-diagnosis
+```
+
+### 2. Create Virtual Environment
+```bash
+conda create -n lungenv python=3.8
+conda activate lungenv
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Application
+```bash
+python app.py
+```
+
+---
+
+## 📂 Project Structure
+
+```
 lung-sound-diagnosis/
 │
 ├── app.py                  # Main Flask app
@@ -82,75 +111,77 @@ lung-sound-diagnosis/
 ├── requirements.txt        # Python dependencies
 ├── README.md               # Project overview
 └── report/                 # Project report and documentation
+```
 
-🚀 Usage
--Open the app in a browser at http://127.0.0.1:5000.
+---
 
--Upload a .wav file of lung sound.
+## 🚀 Usage
 
--Get a diagnosis (e.g., Healthy, Crackles, Wheezes, etc.).
+1. Open the app in a browser at `http://127.0.0.1:5000`.
+2. Upload a `.wav` file of lung sound.
+3. Get a diagnosis (e.g., Healthy, Crackles, Wheezes, etc.).
+4. View confidence score and suggested preventive measures.
 
--View confidence score and suggested preventive measures.
+---
 
-🧪 Testing
-Types of Testing Performed:
--Unit Testing: Feature extraction, segmentation, model prediction
+## 🧪 Testing
 
--Integration Testing: Audio pipeline through UI to model
+### Types of Testing Performed:
+- **Unit Testing**: Feature extraction, segmentation, model prediction
+- **Integration Testing**: Audio pipeline through UI to model
+- **Functional Testing**: User login, file upload, prediction output
+- **System Testing**: Full-stack test from frontend to model output
+- **Cross-validation**: 5-fold CV on dataset
+- **Performance Metrics**:
+  - Accuracy: 99.22%
+  - AUC: 0.93
+  - Precision: High across all classes
 
--Functional Testing: User login, file upload, prediction output
+---
 
--System Testing: Full-stack test from frontend to model output
+## 📊 Results
 
--Cross-validation: 5-fold CV on dataset
+- Highest accuracy: **99.22%**
+- Evaluated on 6800+ audio clips
+- CNN-LSTM outperformed baseline MLP models
+- Real-time processing within 1–2 seconds per clip
 
--Performance Metrics:
+---
 
-  -Accuracy: 99.22%
+## ⚠️ Limitations
 
-  -AUC: 0.93
+- Requires Internet connection to function fully (for updates or deployment).
+- Limited performance in very noisy environments or low-quality audio.
+- Requires a dataset with labeled lung sounds for retraining.
 
-Precision: High across all classes
+---
 
-📊 Results
-1.Highest accuracy: 99.22%
+## 👨‍💻 Contributors
 
-2.Evaluated on 6800+ audio clips
+- **Rohit Pawar**
+- **Aditi Raut**
+- **Sneha Jadhav**
 
-3.CNN-LSTM outperformed baseline MLP models
+**Under the guidance of**: Prof. Shah S. N.
 
-4.Real-time processing within 1-2 seconds per clip
+---
 
-⚠️ Limitations
-1.Requires Internet connection to function fully (for updates or deployment).
+## 📃 License
 
-2.Limited performance in very noisy environments or low-quality audio.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-3.Requires a dataset with labeled lung sounds for retraining.
+---
 
-👨‍💻 Contributors
-1.Rohit Pawar
+## 📚 References
 
-2.Aditi Raut
+- ICBHI 2017 Challenge Dataset
+- Librosa Documentation
+- TensorFlow/Keras Docs
+- [CNN](https://en.wikipedia.org/wiki/Convolutional_neural_network)
+- [LSTM](https://en.wikipedia.org/wiki/Long_short-term_memory)
 
-3.Sneha Jadhav
+---
 
-Under the guidance of: Prof. Shah S. N.
+## 📌 Acknowledgment
 
-📃 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-📚 References
-1.ICBHI 2017 Challenge Dataset
-
-2.Librosa Documentation
-
-3.TensorFlow/Keras Docs
-
-4.CNN
-
-5.LSTM
-
-📌 Acknowledgment
 This work was completed as part of the Bachelor of Engineering (Computer Engineering) curriculum at SSPM's Sharadchandra Pawar College of Engineering and Technology, affiliated with Savitribai Phule Pune University, 2024–2025.
-
